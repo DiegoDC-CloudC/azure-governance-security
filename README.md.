@@ -1,3 +1,15 @@
 # Azure Governance & Security Hub
 
 Este repositorio contiene laboratorios prácticos de gobernanza, cumplimiento y seguridad en entornos Microsoft Azure, enfocados en el control de costes y la mitigación de riesgos operativos.
+
+## Contenido del Repositorio
+
+### 1. Control de Regiones Permitidas (Azure Policy)
+* **Ubicación:** `/01-azure-policies/restrict-regions.json`
+* **Objetivo:** Restringir la creación de recursos únicamente a las regiones de `East US`.
+* **Impacto:** Evita costos ocultos por despliegues en regiones costosas y alinea los recursos con la arquitectura local.
+
+### 2. Control de Acceso Basado en Roles Mínimos (Azure RBAC)
+* **Ubicación:** `/02-azure-rbac/custom-role-compute.json`
+* **Objetivo:** Definición de un rol personalizado (`Soporte-Junior-Compute`) con el principio de menor privilegio.
+* **Impacto:** Permite al equipo de soporte auditar, encender y apagar máquinas virtuales, bloqueando por completo la capacidad de crear o eliminar infraestructura crítica.
