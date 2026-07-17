@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "displayName": "Permitir despliegue solo en East US 2 y Central US",
+    "description": "Esta política bloquea la creación de recursos en regiones distintas a East US 2 y Central US.",
+    "mode": "Indexed",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "location",
+            "notIn": [
+              "eastus"
+            ]
+          },
+          {
+            "field": "location",
+            "notEquals": "global"
+          }
+        ]
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  }
+}
